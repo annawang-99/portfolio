@@ -1,0 +1,26 @@
+[
+  {
+    "id": "01",
+    "title": "E-Commerce Site",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "techStack": ["C#", ".NET", "Angular", "Azure", "Stripe"],
+    "siteUrl": "https://github.com/annaw-99",
+    "repoUrl": "https://github.com/annaw-99"
+  },
+  {
+    "id": "02",
+    "title": "QR Code Generator",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "techStack": ["C#", ".NET", "Angular", "Azure", "Stripe"],
+    "siteUrl": "https://github.com/annaw-99",
+    "repoUrl": "https://github.com/annaw-99"
+  },
+  {
+    "id": "03",
+    "title": "RAG Chatbot",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "techStack": ["C#", ".NET", "Angular", "Azure", "Stripe"],
+    "siteUrl": "https://github.com/annaw-99",
+    "repoUrl": "https://github.com/annaw-99"
+  }
+]
