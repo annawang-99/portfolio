@@ -4,9 +4,9 @@ import Projects from "./pages/projects";
 
 export default function Home() {
   return (
-    <div className="justify-center bg-black font-sans">
-      <About></About>
-      <Projects></Projects>
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+      <div className="snap-start min-h-screen"><About /></div>
+      <div className="snap-start min-h-screen"><Projects /></div>
     </div>
   );
 }

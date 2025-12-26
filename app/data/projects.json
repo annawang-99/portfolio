@@ -2,25 +2,33 @@
   {
     "id": "01",
     "title": "E-Commerce Site",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "description": "An end-to-end e-commerce solution featuring API development, database management, user authentication systems, and frontend optimization for seamless shopping experience.",
     "techStack": ["C#", ".NET", "Angular", "Azure", "Stripe"],
-    "siteUrl": "https://github.com/annaw-99",
-    "repoUrl": "https://github.com/annaw-99"
+    "siteUrl": "https://the-market-place.azurewebsites.net/shop",
+    "repoUrl": "https://github.com/annaw-99/e-commerce"
   },
   {
     "id": "02",
     "title": "QR Code Generator",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    "techStack": ["C#", ".NET", "Angular", "Azure", "Stripe"],
-    "siteUrl": "https://github.com/annaw-99",
-    "repoUrl": "https://github.com/annaw-99"
+    "description": "A web tool that allows users to quickly create customized QR codes.",
+    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "shadcn UI"],
+    "siteUrl": "https://insta-qr-ten.vercel.app/",
+    "repoUrl": "https://github.com/annaw-99/qr-code"
   },
   {
     "id": "03",
     "title": "RAG Chatbot",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    "techStack": ["C#", ".NET", "Angular", "Azure", "Stripe"],
-    "siteUrl": "https://github.com/annaw-99",
-    "repoUrl": "https://github.com/annaw-99"
+    "description": "A Q&A chatbot that processes .pdf and .txt files for context-aware responses.",
+    "techStack": ["Python", "Docker", "Streamlit", "LangChain", "LLM"],
+    "siteUrl": "",
+    "repoUrl": "https://github.com/annaw-99/RAG-chatbot"
+  },
+  {
+    "id": "04",
+    "title": "Restaurant Waitlist System",
+    "description": "A unified waitlist platform that allows customers to join queues at different restaurants through a centralized interface.",
+    "techStack": ["Next.js", "PrismaSQL", "NextAuth", "Framer", "shadcn UI"],
+    "siteUrl": "https://nextjs-hack.vercel.app/",
+    "repoUrl": "https://github.com/annaw-99/nextjs-hackathon"
   }
 ]
