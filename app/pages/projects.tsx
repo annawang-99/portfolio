@@ -41,7 +41,8 @@ export default function Projects() {
                 <div className="flex justify-between items-center h-[150px]">
                     <div className="flex items-baseline space-x-6">
                         <h3 className="text-[80px] text-white font-bold">{project.id}.</h3>
-                        <p className="text-[30px] text-white">{project.title}</p>
+                        <p className="text-[30px] text-white font-semibold uppercase">{project.title}</p>
+                        <p className="text-[12px] text-orange-300">{project.subtitle}</p>
                     </div>
 
                 </div>
