@@ -1,7 +1,7 @@
 "use client";
 import projects from "../data/projects.json";
 import { useState } from "react";
-
+import Image from "next/image";
 
 export default function Projects() {
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -48,7 +48,7 @@ export default function Projects() {
                 </div>
 
                 <div className={`overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-[300px] pb-6" : "max-h-0"}`}>
+                    isOpen ? "pb-6" : "max-h-0"}`}>
                     <p className="text-white text-[20px] mb-4 max-w-[700px]">
                         {project.description}
                     </p>
@@ -56,6 +56,19 @@ export default function Projects() {
                     <p className="text-white text-[12px] font-bold">
                         {project.techStack.join(", ")}
                     </p>
+                    {project.images && project.images.length > 0 && (
+                      <div
+                        className="mt-6 flex space-x-4 overflow-x-auto"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {project.images.map((src: string, idx: number) => (
+                          <div key={idx} className="relative min-w-[220px] h-[140px] border border-white">
+                            <Image src={src} alt={`${project.title} screenshot ${idx + 1}`}
+                              fill className="object-cover"/>
+                          </div>
+                        ))}
+                      </div>
+                    )}
 
                     <div className="flex space-x-6 mt-6">
                         {project.siteUrl && (

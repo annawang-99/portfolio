@@ -6,7 +6,12 @@
     "description": "An end-to-end e-commerce solution featuring API development, database management, user authentication systems, and frontend optimization for seamless shopping experience.",
     "techStack": ["C#", ".NET", "Angular", "Azure", "Stripe"],
     "siteUrl": "https://the-market-place.azurewebsites.net/shop",
-    "repoUrl": "https://github.com/annaw-99/e-commerce"
+    "repoUrl": "https://github.com/annaw-99/e-commerce",
+    "images": [
+      "/projects/project1_1.png",
+      "/projects/project1_2.png",
+      "/projects/project1_3.png"
+    ]
   },
   {
     "id": "02",
