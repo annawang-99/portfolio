@@ -15,12 +15,16 @@
   },
   {
     "id": "02",
-    "title": "QR Code Generator",
-    "subtitle": "Front-End Focused Website",
+    "title": "InstaQR",
+    "subtitle": "QR Code Generator Site",
     "description": "A web tool that allows users to quickly create customized QR codes.",
     "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "shadcn UI"],
     "siteUrl": "https://insta-qr-ten.vercel.app/",
-    "repoUrl": "https://github.com/annaw-99/qr-code"
+    "repoUrl": "https://github.com/annaw-99/qr-code",
+    "images": [
+      "/projects/project2_1.png",
+      "/projects/project2_2.png"
+    ]
   },
   {
     "id": "03",
@@ -38,6 +42,11 @@
     "description": "(hugh - eey) A unified waitlist platform that allows customers to join queues at different restaurants through a centralized interface.",
     "techStack": ["Next.js", "PrismaSQL", "NextAuth", "Framer", "shadcn UI"],
     "siteUrl": "https://nextjs-hack.vercel.app/",
-    "repoUrl": "https://github.com/annaw-99/nextjs-hackathon"
+    "repoUrl": "https://github.com/annaw-99/nextjs-hackathon",
+    "images": [
+      "/projects/project4_1.png",
+      "/projects/project4_2.png",
+      "/projects/project4_3.png"
+    ]
   }
 ]
