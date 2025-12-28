@@ -30,7 +30,7 @@
     "id": "04",
     "title": "HUEY",
     "subtitle": "Restaurant Waitlist System Full-Stack Website",
-    "description": "A unified waitlist platform that allows customers to join queues at different restaurants through a centralized interface.",
+    "description": "(hugh - eey) A unified waitlist platform that allows customers to join queues at different restaurants through a centralized interface.",
     "techStack": ["Next.js", "PrismaSQL", "NextAuth", "Framer", "shadcn UI"],
     "siteUrl": "https://nextjs-hack.vercel.app/",
     "repoUrl": "https://github.com/annaw-99/nextjs-hackathon"

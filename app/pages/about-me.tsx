@@ -8,7 +8,16 @@ export default function About() {
                 <h3 className="text-white font-semibold text-[56px] mb-6">About Me.</h3>
                 
                 <p className="relative text-white text-lg leading-relaxed max-w-[300px]">
-                    Check out my Github, find me on LinkedIn, or send me an email to say&nbsp;
+                    Check out my&nbsp;
+                    <a href="https://github.com/annaw-99" target="_blank" rel="noopener noreferrer"
+                    className="text-white hover:text-emerald-500">Github</a>
+                    , find me on&nbsp;
+                    <a href="https://www.linkedin.com/in/tungyen-wang" target="_blank" rel="noopener noreferrer"
+                    className="text-white hover:text-emerald-500">LinkedIn</a>
+                    , or send me an&nbsp;
+                    <a href="mailto:annawang9909@gmail.com" target="_blank" rel="noopener noreferrer"
+                    className="text-white hover:text-emerald-500">email</a>
+                    &nbsp;to say&nbsp;
                     <span className="group cursor-pointer">'hi'
                         <span className="absolute left-0 top-full mt-2 opacity-0 
                         group-hover:opacity-100 transition-opacity text-orange-300 text-sm">
