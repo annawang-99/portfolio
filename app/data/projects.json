@@ -48,5 +48,14 @@
       "/projects/project4_2.png",
       "/projects/project4_3.png"
     ]
+  },
+  {
+    "id": "05",
+    "title": "MONI",
+    "subtitle": "Money Tracking iOS App",
+    "description": "(in progress) ",
+    "techStack": ["SwiftUI"],
+    "siteUrl": "",
+    "repoUrl": ""
   }
 ]

@@ -51,7 +51,6 @@ export default function Projects() {
                         <p className="text-[30px] text-white font-semibold uppercase">{project.title}</p>
                         <p className="text-[12px] text-orange-300">{project.subtitle}</p>
                     </div>
-
                 </div>
 
                 <div className={`overflow-hidden transition-all duration-300 ${

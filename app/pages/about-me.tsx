@@ -55,7 +55,8 @@ export default function About() {
             </div>
 
             <div className="flex flex-col items-end">
-                <h5 className="text-white text-[24px] font-light">New York.</h5>
+                <h5 className="text-white text-[24px] font-light">
+                New York.</h5>
                 <h5 className="text-white text-[24px] font-light mb-10">Software Developer.</h5>
                 <h1 className="text-white text-[168px] font-bold leading-[0.7]">Anna W.</h1>
             </div>

@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.scroll-bar {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  scale: 0 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: scroll-progress linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-progress {
+  to { transform: scaleX(1); }
+}
+
+.newyork:hover {
+  cursor: url('/cursors/newyork.png'), auto;
+}
