@@ -89,7 +89,6 @@ export default function App() {
 
       <div className="fixed inset-0 bg-black z-0" />
       
-      {/* Background patterns */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,_#0a0a0a_0%,_black_100%)] z-10 pointer-events-none" />
       <div 
         className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]"
@@ -101,7 +100,7 @@ export default function App() {
 
         <footer className="fixed bottom-0 left-0 w-full h-24 flex items-center justify-end px-12 z-[200] pointer-events-none">
             <div className="pointer-events-auto opacity-30 text-[10px] font-mono tracking-widest uppercase">
-                EST. 2024 // 40.7479° N, 73.9867° W
+                EST. 1999 // 40.7479° N, 73.9867° W
             </div>
         </footer>
 

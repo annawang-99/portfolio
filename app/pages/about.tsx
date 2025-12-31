@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="pointer-events-auto w-full max-w-5xl flex flex-col">
+    <div className="pointer-events-auto w-full lg:max-w-5xl 2xl:max-w-6xl flex flex-col">
         <div>
             <h3 className="text-white text-4xl lg:text-6xl font-extralight">I'm Anna.</h3>
             <h3 className="text-zinc-500 text-4xl lg:text-6xl font-extralight">Software Developer & Digital Crafter</h3>
@@ -10,15 +10,15 @@ export default function About() {
             <p className="relative text-zinc-500 text-lg leading-relaxed max-w-[500px]">
                 Check out my&nbsp;
                 <a href="https://github.com/annaw-99" target="_blank" rel="noopener noreferrer"
-                className="hover:text-white">Github</a>
+                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">Github</a>
                 , find me on&nbsp;
                 <a href="https://www.linkedin.com/in/tungyen-wang" target="_blank" rel="noopener noreferrer"
-                className="hover:text-white">LinkedIn</a>
+                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">LinkedIn</a>
                 , or send me an&nbsp;
                 <a href="mailto:annawang9909@gmail.com" target="_blank" rel="noopener noreferrer"
-                className="hover:text-white">email</a>
+                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">email</a>
                 &nbsp;to say&nbsp;
-                <span className="group cursor-pointer">'hi'
+                <span className="group cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">'hi'
                 <span className="absolute left-0 top-full mt-2 opacity-0 
                     group-hover:opacity-100 transition-opacity text-orange-300 text-sm">
                     (*waves👋*)
@@ -28,7 +28,7 @@ export default function About() {
             </p>
         </div>
 
-        <div className="mt-auto pt-8 border-t border-white/10 flex flex-wrap gap-x-12">
+        <div className="lg:mt-[70px] 2xl:mt-[250px] pt-8 border-t border-white/10 flex flex-wrap gap-x-12">
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Connect</span>
                 <div className="flex gap-6">
