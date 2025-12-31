@@ -1,38 +1,50 @@
-"use client";
+import { motion, useTransform } from 'framer-motion';
+import About from '../pages/about';
+import Projects from '../pages/projects';
+import Contact from '../pages/contact';
 
-import { PropsWithChildren, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+const ScrollAnimation = ({ section, index, total, scrollYProgress }) => {
+    const step = 1 / (total - 1);
+    const targetPos = index * step;
+    const startReveal = targetPos - step;
+    const endReveal = targetPos + step;
 
-type ScrollSectionProps = PropsWithChildren<{
-  className?: string;
-}>;
+    const clipPath = useTransform(
+        scrollYProgress,
+        [startReveal, targetPos, endReveal],
+        [
+            "inset(100% 0% 0% 0%)", 
+            "inset(0% 0% 0% 0%)",   
+            "inset(0% 0% 100% 0%)"  
+        ]
+    );
 
-export default function ScrollSection({ children, className }: ScrollSectionProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
+    const y = useTransform(
+        scrollYProgress,
+        [startReveal, targetPos, endReveal],
+        [40, 0, -40]
+    );
 
-  // progress goes 0->1 as this section moves through the viewport
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  // Parallax + subtle scale
-  const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.98, 1, 0.98]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+    const opacity = useTransform(
+        scrollYProgress,
+        [startReveal + (step * 0.2), targetPos, endReveal - (step * 0.2)],
+        [0, 1, 0]
+    );
 
   return (
-    <section ref={ref} className={["min-h-screen relative", className].filter(Boolean).join(" ")}>
-      <motion.div
-        style={{ y, scale, opacity }}
-        initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        viewport={{ amount: 0.35, once: false }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="h-full"
-      >
-        {children}
+    <div className="fixed inset-0 p-10 md:p-20 pointer-events-none" style={{ zIndex: index + 150 }}>
+      <motion.div style={{ clipPath, opacity, y }}
+        className="w-full h-full flex flex-col items-start justify-start overflow-y-auto custom-scrollbar">
+        <h2 style={{ color: section.textColor }} className="text-6xl xl:text-8xl font-black uppercase mb-6">
+            {section.title}
+        </h2>
+        
+        {section.id === 'about' && <About />}
+        {section.id === 'projects' && <Projects/>}
+        {section.id === 'contact' && <Contact />}
       </motion.div>
-    </section>
+    </div>
   );
-}
+};
+
+export default ScrollAnimation;

@@ -27,6 +27,10 @@ export default function About() {
                     , or <span className="underline">scroll down</span> to see some of my work.
                 </p>
             </div>
+
+            {/* <h3 className="text-[#AFA18F] font-bold text-[64px] tracking-tighter">
+                I'm a selectively skilled product designer
+            </h3> */}
         </div>
 
         <div className="flex justify-between items-end">
@@ -49,16 +53,15 @@ export default function About() {
                 active:translate-x-0 active:translate-y-0 active:shadow-none">
                     Email
                 </a>
-                
-
 
             </div>
 
             <div className="flex flex-col items-end">
-                <h5 className="text-white text-[24px] font-light">
-                New York.</h5>
+                <h5 className="text-white text-[24px] font-light">New York.</h5>
                 <h5 className="text-white text-[24px] font-light mb-10">Software Developer.</h5>
-                <h1 className="text-white text-[168px] font-bold leading-[0.7]">Anna W.</h1>
+                <h1 className="text-white text-[168px] font-bold leading-[0.7] tracking-tighter relative">Anna W.
+                    <span className="absolute text-white text-[30px] -top-4 -right-2">&copy;</span>
+                </h1>
             </div>
         </div>
       </div>
