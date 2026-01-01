@@ -1,5 +1,6 @@
 "use client";
-import { useRef, useState } from 'react';
+
+import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, AnimatePresence } from 'framer-motion';
 import ScrollAnimation from './components/scroll';
 
@@ -28,8 +29,8 @@ export default function App() {
     const containerRef = useRef(null);
     const [isStarted, setIsStarted] = useState(false);
     const [showContent, setShowContent] = useState(false);
-    const [isBooting, setIsBooting] = useState(false);
-    
+    const [progress, setProgress] = useState(0);
+
     const { scrollYProgress } = useScroll({
         container: containerRef
     });
@@ -39,53 +40,55 @@ export default function App() {
         setTimeout(() => setShowContent(true), 100);
     };
 
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter' && !isBooting) {
-        setIsBooting(true);
-        setTimeout(handleComplete, 400);
-        }
-    };
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setProgress((prev) => {
+                if (prev >= 100) {
+                    clearInterval(timer);
+                    setTimeout(() => {
+                        setIsStarted(true);
+                        setTimeout(() => setShowContent(true), 100);
+                    }, 500);
+                    return 100;
+                }
+                return prev + 1;
+            });
+        }, 30);
+        return () => clearInterval(timer);
+    }, []);
+
+    const radius = 45;
+    const circumference = 2 * Math.PI * radius;
+    const strokeDashoffset = circumference - (progress / 100) * circumference;
 
   return (
     <div className="relative font-sans antialiased bg-black selection:bg-white selection:text-black w-full h-screen overflow-hidden text-white">
         <AnimatePresence mode="wait">
             {!isStarted && (
-            <motion.div key="landing" initial={{ opacity: 1 }}
+            <motion.div 
+                key="landing" 
+                initial={{ opacity: 1 }}
                 exit={{ opacity: 0, scale: 1.05, filter: "blur(8px)", 
                 transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }}}
-                className="fixed inset-0 z-[500] bg-black flex items-start justify-start font-mono p-8 md:p-12 select-none cursor-default focus:outline-none"
-                onKeyDown={handleKeyDown} tabIndex={0} autoFocus>
-                <div className="w-full relative">
-                <motion.div animate={isBooting ? { x: 10, opacity: 0 } : { x: 0, opacity: 1 }}
-                    className="flex flex-wrap items-center text-lg md:text-xl gap-x-3">
-                    <div className="flex items-center gap-3">
-                        <span className="text-green-400">anna@macbookpro</span>
-                        <span className="text-white">portfolio %</span>
-                    </div>
-                    <div className="flex items-center">
-                    <span className="text-indigo-400">npm run dev</span>
-                    {!isBooting && (
-                        <motion.span 
-                        animate={{ opacity: [0, 1] }} 
-                        transition={{ repeat: Infinity, duration: 0.8 }}
-                        className="inline-block w-2.5 h-6 bg-white ml-2 translate-y-0.5"
-                        />
-                    )}
-                    </div>
-                </motion.div>
-
-                <AnimatePresence>
-                    {!isBooting && (
-                    <motion.div initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.3 }}
-                        exit={{ opacity: 0 }}
-                        className="text-zinc-500 text-sm mt-4"
-                    >
-                        Press [ENTER]
-                    </motion.div>
-                    )}
-                </AnimatePresence>
+                className="fixed inset-0 z-[500] bg-black flex flex-col items-center justify-center select-none"
+            >
+                <div className="relative flex items-center justify-center">
+                    <svg className="w-32 h-32 transform -rotate-90">
+                        <circle cx="64" cy="64" r={radius} stroke="currentColor" strokeWidth="2" fill="transparent"
+                            className="text-zinc-800"/>
+                        <motion.circle cx="64" cy="64" r={radius} stroke="currentColor" strokeWidth="2" fill="transparent"
+                            strokeDasharray={circumference} animate={{ strokeDashoffset }}transition={{ ease: "linear" }}
+                            className="text-white"/>
+                    </svg>
+                    <span className="absolute font-mono text-sm tracking-widest text-white">
+                        {progress}%
+                    </span>
                 </div>
+                
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 0.4, y: 0 }}
+                    className="mt-8 font-mono text-[10px] uppercase tracking-[0.4em] text-white/70">
+                    Tip: Hover around the site
+                </motion.div>
             </motion.div>
             )}
         </AnimatePresence>
@@ -93,8 +96,7 @@ export default function App() {
       <div className="fixed inset-0 bg-black z-0" />
       
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,_#0a0a0a_0%,_black_100%)] z-10 pointer-events-none" />
-      <div 
-        className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]"
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`,
           backgroundSize: '40px 40px'

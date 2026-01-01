@@ -34,14 +34,22 @@ export default function Projects() {
                     className="overflow-hidden">
                 <div className="pt-8 pb-4 grid gap-8 pointer-events-auto">
                     <div>
-                        <p className="text-lg text-zinc-300 leading-relaxed">
-                            {proj.description}
-                        </p>
-                        <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-                            <span className='italic'>why?&nbsp;&nbsp;</span>
-                            <span className='text-zinc-500'>{proj.thoughts}</span>
-                            &nbsp;{proj.why}
-                        </p>
+                        <div className='mb-6'>
+                            <p className="text-lg text-zinc-300 leading-relaxed">
+                                {proj.description}
+                            </p>
+                            {proj.why && (
+                                <p className="text-lg text-zinc-300 leading-relaxed">
+                                    <span className='italic'>why?&nbsp;&nbsp;</span>{proj.why}
+                                </p>
+                            )}
+                            {proj.notes && (
+                                <p className="text-lg text-zinc-500 leading-relaxed">
+                                    {proj.notes}
+                                </p>
+                            )}
+                        </div>
+                        
                         {!!proj.images?.length && (
                             <div className="mb-6 flex space-x-4 overflow-x-auto" onClick={(e) => e.stopPropagation()}>
                             {proj.images.map((src: string, idx: number) => (
