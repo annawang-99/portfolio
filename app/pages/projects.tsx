@@ -34,10 +34,14 @@ export default function Projects() {
                     className="overflow-hidden">
                 <div className="pt-8 pb-4 grid gap-8 pointer-events-auto">
                     <div>
-                        <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                        <p className="text-lg text-zinc-300 leading-relaxed">
                             {proj.description}
                         </p>
-                        
+                        <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                            <span className='italic'>why?&nbsp;&nbsp;</span>
+                            <span className='text-zinc-500'>{proj.thoughts}</span>
+                            &nbsp;{proj.why}
+                        </p>
                         {!!proj.images?.length && (
                             <div className="mb-6 flex space-x-4 overflow-x-auto" onClick={(e) => e.stopPropagation()}>
                             {proj.images.map((src: string, idx: number) => (
@@ -54,8 +58,10 @@ export default function Projects() {
                                 </span>
                             ))}
                             <div className="flex items-center gap-4 justify-end ml-4">
-                                <a href={proj.siteUrl} target="_blank" rel="noopener noreferrer" 
-                                className="text-white hover:text-indigo-400 transition-colors text-sm font-bold uppercase tracking-widest">Live Site ↗</a>
+                                {proj.siteUrl && (
+                                    <a href={proj.siteUrl} target="_blank" rel="noopener noreferrer" 
+                                    className="text-white hover:text-indigo-400 transition-colors text-sm font-bold uppercase tracking-widest">Live Site ↗</a>
+                                )}
                                 <a href={proj.repoUrl} target="_blank" rel="noopener noreferrer" 
                                 className="text-white hover:text-indigo-400 transition-colors text-sm font-bold uppercase tracking-widest">Github Repo ↗</a>
                             </div>

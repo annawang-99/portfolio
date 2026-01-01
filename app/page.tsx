@@ -6,16 +6,19 @@ import ScrollAnimation from './components/scroll';
 const sections = [
     {
         id: 'about',
+        num: '01',
         title: 'About Me',
         textColor: '#f8fafc',
     },
     {
         id: 'projects',
+        num: '02',
         title: 'My Work',
         textColor: '#e0e7ff',
     },
     {
         id: 'contact',
+        num: '03',
         title: 'Contact Me',
         textColor: '#fef2f2',
     },

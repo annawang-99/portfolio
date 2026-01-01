@@ -1,9 +1,9 @@
 export default function About() {
   return (
-    <div className="pointer-events-auto w-full lg:max-w-5xl 2xl:max-w-6xl flex flex-col">
+    <div className="pointer-events-auto w-full lg:max-w-5xl 2xl:w-[70%] flex flex-col">
         <div>
-            <h3 className="text-white text-4xl lg:text-6xl font-extralight">I'm Anna.</h3>
-            <h3 className="text-zinc-500 text-4xl lg:text-6xl font-extralight">Software Developer & Digital Crafter</h3>
+            <h3 className="text-white text-4xl lg:text-6xl 2xl:text-[86px] font-extralight">I'm Anna.</h3>
+            <h3 className="text-zinc-500 text-4xl lg:text-6xl 2xl:text-[86px] font-extralight">Software Developer & Digital Crafter</h3>
         </div>
 
         <div className="my-12">
@@ -28,7 +28,7 @@ export default function About() {
             </p>
         </div>
 
-        <div className="lg:mt-[70px] 2xl:mt-[250px] pt-8 border-t border-white/10 flex flex-wrap gap-x-12">
+        <div className="lg:mt-[30px] 2xl:mt-[50px] pt-8 border-t border-white/10 flex flex-wrap gap-x-12">
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Connect</span>
                 <div className="flex gap-6">

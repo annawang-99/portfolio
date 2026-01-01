@@ -35,7 +35,10 @@ const ScrollAnimation = ({ section, index, total, scrollYProgress }) => {
     <div className="fixed inset-0 p-10 md:p-20 pointer-events-none" style={{ zIndex: index + 150 }}>
       <motion.div style={{ clipPath, opacity, y }}
         className="w-full h-full flex flex-col items-start justify-start overflow-y-auto custom-scrollbar">
-        <h2 style={{ color: section.textColor }} className="text-6xl xl:text-8xl font-black uppercase mb-6">
+        <div className='flex items-center text-zinc-500 space-x-6 lg:mb-4 2xl:mb-10'>
+          <p className='tracking-[0.3em] '>{ section.num } &nbsp;//&nbsp;</p><hr className='w-[100px] opacity-50 ' />
+        </div>
+        <h2 style={{ color: section.textColor }} className="text-6xl lg:text-8xl 2xl:text-[128px] font-black uppercase mb-6">
             {section.title}
         </h2>
         

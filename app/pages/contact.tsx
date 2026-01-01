@@ -21,7 +21,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Social</span>
           <div className="flex flex-col gap-3">
             <a 
@@ -41,12 +41,7 @@ export default function Contact() {
               LinkedIn →
             </a>
           </div>
-        </div>
-
-        <div className="space-y-2">
-          <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Location</span>
-          <span className="text-xl lg:text-2xl font-extralight text-white">NYC / Remote</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
