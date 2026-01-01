@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Contact() {
   return (
     <div className="pointer-events-auto w-full max-w-5xl flex flex-col">

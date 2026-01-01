@@ -33,7 +33,7 @@
     "title": "Q&A Chatbot",
     "subtitle": "RAG AI Chatbot",
     "description": "A Q&A chatbot that processes .pdf and .txt files for context-aware responses.",
-    "notes": "I really enjoyed working on this, so I teamed up with others to build a small Character AI clone using RAG architecture and MongoDB.",
+    "notes": "I really enjoyed working on this, so I teamed up with others to build a small Character AI clone using RAG architecture and MongoDB. :)",
     "techStack": ["Python", "Docker", "Streamlit", "LangChain", "LLM"],
     "siteUrl": "",
     "repoUrl": "https://github.com/annaw-99/RAG-chatbot"

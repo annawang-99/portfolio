@@ -9,18 +9,18 @@ const sections = [
         id: 'about',
         num: '01',
         title: 'About Me',
-        textColor: '#f8fafc',
-    },
-    {
-        id: 'projects',
-        num: '02',
-        title: 'My Work',
-        textColor: '#e0e7ff',
+        textColor: '#fef2f2',
     },
     {
         id: 'contact',
-        num: '03',
+        num: '02',
         title: 'Contact Me',
+        textColor: '#fef2f2',
+    },
+    {
+        id: 'projects',
+        num: '03',
+        title: 'My Work',
         textColor: '#fef2f2',
     },
 ];
@@ -86,7 +86,7 @@ export default function App() {
                 </div>
                 
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 0.4, y: 0 }}
-                    className="mt-8 font-mono text-[10px] uppercase tracking-[0.4em] text-white/70">
+                    className="mt-8 font-mono text-[10px] tracking-[0.4em] text-white/90">
                     Tip: Hover around the site
                 </motion.div>
             </motion.div>
