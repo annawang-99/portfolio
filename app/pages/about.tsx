@@ -16,7 +16,7 @@ export default function About() {
         <div>
             <h3 className="text-white text-4xl lg:text-6xl 2xl:text-[86px] font-extralight">I'm Anna.</h3>
             <h3 className="text-zinc-500 text-4xl lg:text-6xl 2xl:text-[86px] font-extralight">
-                <span className="inline-block relative cursor-pointer"
+                <span className="inline-block relative"
                     onMouseEnter={() => setIsGlitching(true)}
                     onMouseLeave={() => setIsGlitching(false)}>
                     <span className="relative z-10">Software Developer</span>
@@ -50,15 +50,15 @@ export default function About() {
             <p className="relative text-zinc-500 text-lg leading-relaxed max-w-[500px]">
                 Check out my&nbsp;
                 <a href="https://github.com/annaw-99" target="_blank" rel="noopener noreferrer"
-                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">Github</a>
+                className="cursor-none hover:text-white transition-colors duration-300 ease-in-out">Github</a>
                 , find me on&nbsp;
                 <a href="https://www.linkedin.com/in/tungyen-wang" target="_blank" rel="noopener noreferrer"
-                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">LinkedIn</a>
+                className="cursor-none hover:text-white transition-colors duration-300 ease-in-out">LinkedIn</a>
                 , or send me an&nbsp;
                 <a href="mailto:annawang9909@gmail.com" target="_blank" rel="noopener noreferrer"
-                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">email</a>
+                className="cursor-none hover:text-white transition-colors duration-300 ease-in-out">email</a>
                 &nbsp;to say&nbsp;
-                <span className="group cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">'hi'
+                <span className="group hover:text-white transition-colors duration-300 ease-in-out">'hi'
                 <span className="absolute left-0 top-full mt-2 opacity-0 
                     group-hover:opacity-100 transition-opacity text-orange-300 text-sm">
                     (*waves👋*)
@@ -72,15 +72,15 @@ export default function About() {
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Connect</span>
                 <div className="flex gap-6">
-                <a href="https://github.com/annaw-99" target="_blank" className="text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">Github</a>
-                <a href="https://www.linkedin.com/in/tungyen-wang" target="_blank" className="text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">LinkedIn</a>
+                <a href="https://github.com/annaw-99" target="_blank" className="cursor-none text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">Github</a>
+                <a href="https://www.linkedin.com/in/tungyen-wang" target="_blank" className="cursor-none text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">LinkedIn</a>
                 </div>
             </div>
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Contact</span>
                 <button onClick={handleCopyEmail}
-                    className="text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest 
-                    font-bold group/email relative cursor-pointer">
+                    className="cursor-none text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest 
+                    font-bold group/email relative">
                     Email
                     {copied && (
                         <span className="absolute left-0 bottom-full mb-2 

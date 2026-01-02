@@ -21,9 +21,9 @@ export default function Tech() {
     ];
 
     return (
-        <div className="pointer-events-auto w-full lg:max-w-5xl 2xl:max-w-[80%] flex flex-col">
+        <div className="pointer-events-auto w-full lg:max-w-5xl 2xl:max-w-[80%] flex flex-col cursor-none">
             <p className="text-zinc-500 text-lg max-w-[500px] leading-relaxed mb-12">
-                The technologies and tools I use most often to build digital products.
+                The tech and tools I use most often to build digital products.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -41,8 +41,7 @@ export default function Tech() {
                     {group.items.map((skill) => (
                     <li key={skill}
                         onMouseEnter={() => setHoveredSkill(skill)}
-                        onMouseLeave={() => setHoveredSkill(null)}
-                        className="cursor-default">
+                        onMouseLeave={() => setHoveredSkill(null)}>
                         <span className="group/skill relative inline-block">
                             <motion.span 
                                 animate={{ 
@@ -56,7 +55,13 @@ export default function Tech() {
                             {skill === "Next.js" && (
                                 <span className="absolute left-full ml-4 top-0 opacity-0
                                     group-hover/skill:opacity-100 transition-opacity text-orange-300 text-sm whitespace-nowrap">
-                                    (I love this one the most!!)
+                                    (*bouncing excitedly*my favorite!!)
+                                </span>
+                            )}
+                            {skill === "Java" && (
+                                <span className="absolute left-full ml-4 top-0 opacity-0
+                                    group-hover/skill:opacity-100 transition-opacity text-orange-300 text-sm whitespace-nowrap">
+                                    (i know this one best*wink wink*)
                                 </span>
                             )}
                         </span>

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, AnimatePresence } from 'framer-motion';
 import ScrollAnimation from './components/scroll';
+import { Pointer } from "@/components/ui/pointer"
 
 const sections = [
     {
@@ -63,6 +64,10 @@ export default function App() {
 
   return (
     <div className="relative font-sans antialiased bg-black selection:bg-white selection:text-black w-full h-screen overflow-hidden text-white">
+        <Pointer>
+            <div className="text-2xl" >👆</div>
+        </Pointer>
+
         <AnimatePresence mode="wait">
             {!isStarted && (
             <motion.div 
