@@ -2,18 +2,23 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function About() {
-  const [isGlitching, setIsGlitching] = useState(false);
+    const [isGlitching, setIsGlitching] = useState(false);
+    const [copied, setCopied] = useState(false);
 
-  return (
-    <div className="pointer-events-auto w-full lg:max-w-5xl 2xl:w-[70%] flex flex-col">
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText('annawang9909@gmail.com');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
+    return (
+    <div className="pointer-events-auto w-full lg:max-w-5xl 2xl:max-w-[80%] flex flex-col">
         <div>
             <h3 className="text-white text-4xl lg:text-6xl 2xl:text-[86px] font-extralight">I'm Anna.</h3>
             <h3 className="text-zinc-500 text-4xl lg:text-6xl 2xl:text-[86px] font-extralight">
-                <span 
-                    className="inline-block relative cursor-pointer"
+                <span className="inline-block relative cursor-pointer"
                     onMouseEnter={() => setIsGlitching(true)}
-                    onMouseLeave={() => setIsGlitching(false)}
-                >
+                    onMouseLeave={() => setIsGlitching(false)}>
                     <span className="relative z-10">Software Developer</span>
                     
                     <motion.span
@@ -63,7 +68,7 @@ export default function About() {
             </p>
         </div>
 
-        <div className="xl:mt-[30px] 2xl:mt-[50px] pt-8 border-t border-white/10 flex flex-wrap gap-x-12">
+        <div className="xl:mt-[30px] 2xl:mt-[80px] pt-8 border-t border-white/10 flex flex-wrap gap-x-12">
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Connect</span>
                 <div className="flex gap-6">
@@ -73,7 +78,17 @@ export default function About() {
             </div>
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Contact</span>
-                <a href="mailto:annawang9909@gmail.com" className="text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">Email</a>
+                <button onClick={handleCopyEmail}
+                    className="text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest 
+                    font-bold group/email relative cursor-pointer">
+                    Email
+                    {copied && (
+                        <span className="absolute left-0 bottom-full mb-2 
+                            bg-black border border-white/10 px-3 py-1.5 rounded text-zinc-300 text-xs text-center">
+                            Copied!
+                        </span>
+                    )}
+                </button>
             </div>
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Location</span>

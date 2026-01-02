@@ -7,8 +7,13 @@ export default function Projects() {
     const [expandedProject, setExpandedProject] = useState<number | null>(null);
     const textColor = '#e0e7ff';
   
-  return (
+    return (
     <div className="space-y-6 w-full lg:max-w-5xl 2xl:max-w-6xl">
+        <p className="text-zinc-500 text-lg max-w-[500px] leading-relaxed mb-12">
+                A curated selection of 
+                <span className="text-zinc-300"> technologies </span> and 
+                <span className="text-zinc-300"> tools </span> I use to bring digital products to life.
+            </p>
         {projects.map((proj, i) => {
         const isExpanded = expandedProject === i;
         return (
@@ -52,15 +57,16 @@ export default function Projects() {
                         {!!proj.images?.length && (
                             <div className="mb-6 flex space-x-4 overflow-x-auto" onClick={(e) => e.stopPropagation()}>
                             {proj.images.map((src: string, idx: number) => (
-                                <div key={idx} className="relative min-w-[220px] h-[140px] border border-white">
-                                <Image src={src} alt={`${proj.title}`} fill className="object-cover" />
-                                </div>
+                                <a key={idx} href={proj.siteUrl || proj.repoUrl} target="_blank" rel="noopener noreferrer"
+                                    className="relative min-w-[220px] h-[140px] 2xl:min-w-[300px] 2xl:h-[220px] border border-white transition-colors cursor-pointer group/img">
+                                    <Image src={src} alt={`${proj.title}`} fill className="object-cover group-hover/img:opacity-80 transition-opacity" />
+                                </a>
                             ))}
                             </div>
                         )}
                         <div className="flex gap-2">
                             {proj.techStack.map(tech => (
-                                <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono uppercase tracking-wider text-zinc-400">
+                                <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider text-zinc-400">
                                     {tech}
                                 </span>
                             ))}
@@ -101,7 +107,7 @@ export default function Projects() {
                     className="overflow-hidden">
                 <div className="pt-8 pb-4 grid gap-6 pointer-events-auto">
                     <p className="text-lg text-zinc-300 leading-relaxed mb-2">
-                        My first portfolio was built with pure HTML/CSS, my second with React and Tailwind.
+                        My first portfolio was built with pure HTML/CSS, my second with React (Next.js) and Tailwind.
                     </p>
                     <div className="flex items-center gap-4">
                         <a href="https://annaw-99.github.io/web/" target="_blank" rel="noopener noreferrer" 

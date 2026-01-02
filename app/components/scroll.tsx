@@ -2,7 +2,7 @@ import { motion, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import About from '../pages/about';
 import Projects from '../pages/projects';
-import Contact from '../pages/contact';
+import Tech from '../pages/tech';
 
 const ScrollAnimation = ({ section, index, total, scrollYProgress }) => {
     const [hasAnimatedIn, setHasAnimatedIn] = useState(false);
@@ -68,7 +68,7 @@ const ScrollAnimation = ({ section, index, total, scrollYProgress }) => {
                 </h2>
                 
                 {section.id === 'about' && <About />}
-                {section.id === 'contact' && <Contact />}
+                {section.id === 'tech' && <Tech />}
                 {section.id === 'projects' && <Projects/>}
             </motion.div>
         </motion.div>

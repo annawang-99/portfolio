@@ -12,9 +12,9 @@ const sections = [
         textColor: '#fef2f2',
     },
     {
-        id: 'contact',
+        id: 'tech',
         num: '02',
-        title: 'Contact Me',
+        title: 'Tech Stack',
         textColor: '#fef2f2',
     },
     {
@@ -104,7 +104,7 @@ export default function App() {
       />
 
         <footer className="fixed bottom-0 left-0 w-full h-24 flex items-center justify-end px-12 z-[200] pointer-events-none">
-            <div className="pointer-events-auto opacity-30 text-[10px] font-mono tracking-widest uppercase">
+            <div className="pointer-events-auto opacity-30 text-[10px] 2xl:text-[12px] font-mono tracking-widest uppercase">
                 EST. 1999 // 40.7479° N, 73.9867° W
             </div>
         </footer>
