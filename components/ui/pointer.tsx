@@ -35,7 +35,7 @@ export function Pointer({
       const parentElement = containerRef.current.parentElement
 
       if (parentElement) {
-        // Add cursor-none to parent
+        // Add cursor-pointer to parent
         parentElement.style.cursor = "none"
 
         // Add event listeners to parent
