@@ -9,11 +9,11 @@ export default function Projects() {
   
     return (
     <div className="space-y-6 w-full lg:max-w-5xl 2xl:max-w-6xl">
-        <p className="text-zinc-500 text-lg max-w-[500px] leading-relaxed mb-12">
-                A curated selection of 
-                <span className="text-zinc-300"> technologies </span> and 
-                <span className="text-zinc-300"> tools </span> I use to bring digital products to life.
-            </p>
+        {/* <p className="text-zinc-500 text-lg max-w-[500px] leading-relaxed mb-12">
+            A curated selection of 
+            <span className="text-zinc-300"> technologies </span> and 
+            <span className="text-zinc-300"> tools </span> I use to bring digital products to life.
+        </p> */}
         {projects.map((proj, i) => {
         const isExpanded = expandedProject === i;
         return (

@@ -86,7 +86,7 @@ export default function App() {
                 </div>
                 
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 0.4, y: 0 }}
-                    className="mt-8 font-mono text-[10px] tracking-[0.4em] text-white/90">
+                    className="mt-8 font-mono text-[12px] tracking-[0.4em] text-white/90 font-semibold">
                     Tip: Hover around the site
                 </motion.div>
             </motion.div>
