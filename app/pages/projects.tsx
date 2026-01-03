@@ -5,7 +5,7 @@ import projects from '../data/projects.json';
 
 export default function Projects() {
     const [expandedProject, setExpandedProject] = useState<number | null>(null);
-    const textColor = '#e0e7ff';
+    const textColor = 'white';
   
     return (
     <div className="space-y-6 w-full lg:max-w-5xl 2xl:max-w-6xl">

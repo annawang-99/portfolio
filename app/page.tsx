@@ -53,8 +53,8 @@ export default function App() {
                         </svg>
                         <span className="absolute font-mono text-[10px] tracking-widest text-white">{progress}%</span>
                     </div>
-                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 0.4, y: 0 }}
-                        className="mt-8 text-[12px] tracking-[0.4em] text-white/90 font-semibold">
+                    <motion.div 
+                        className="mt-8 text-[12px] tracking-[0.4em] text-white/80 font-semibold">
                         Tip: Hover around the site
                     </motion.div>
                 </motion.div>
@@ -111,7 +111,7 @@ export default function App() {
                         
                         <h1 className="text-5xl md:text-8xl lg:text-[110px] font-black uppercase mb-10 tracking-tighter leading-none">
                             {section.title.split(' ').map((word, i) => (
-                                <span key={i} className={i % 2 === 0 ? "text-white" : "text-zinc-800"}>{word}{' '}</span>
+                                <span key={i} className={i % 2 === 0 ? "text-white" : "text-zinc-700"}>{word}{' '}</span>
                             ))}
                         </h1>
 
