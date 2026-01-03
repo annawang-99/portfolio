@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-export default function About( { setActiveTab } ) {
+interface AboutProps {
+  setActiveTab: (tab: string) => void;
+}
+
+export default function About( { setActiveTab }: AboutProps ) {
     const [isGlitching, setIsGlitching] = useState(false);
     const [copied, setCopied] = useState(false);
 

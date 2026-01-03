@@ -2,7 +2,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Tech() {
+interface TechProps {
+  setActiveTab: (tab: string) => void;
+}
+
+export default function Tech({ setActiveTab }: TechProps) {
     const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
     const stack = [

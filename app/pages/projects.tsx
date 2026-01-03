@@ -3,7 +3,11 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import projects from '../data/projects.json';
 
-export default function Projects() {
+interface ProjectsProps {
+  setActiveTab: (tab: string) => void;
+}
+
+export default function Projects({ setActiveTab }: ProjectsProps) {
     const [expandedProject, setExpandedProject] = useState<number | null>(null);
     const textColor = 'white';
   
