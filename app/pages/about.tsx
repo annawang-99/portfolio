@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-export default function About() {
+export default function About( { setActiveTab } ) {
     const [isGlitching, setIsGlitching] = useState(false);
     const [copied, setCopied] = useState(false);
 
@@ -47,7 +47,7 @@ export default function About() {
         </div>
 
         <div className="my-12">
-            <p className="relative text-zinc-500 text-lg leading-relaxed max-w-[500px]">
+            <p className="relative text-zinc-400 text-lg leading-relaxed max-w-[500px]">
                 Check out my&nbsp;
                 <a href="https://github.com/annaw-99" target="_blank" rel="noopener noreferrer"
                 className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">Github</a>
@@ -64,7 +64,12 @@ export default function About() {
                     (*waves👋*)
                 </span>
                 </span>
-                , or <span className="underline">scroll down</span> to see some of my work.
+                , or see&nbsp;
+                <span onClick={() => setActiveTab('projects')} 
+                    className="cursor-pointer hover:text-white transition-colors 
+                    duration-300 underline decoration-white/30">
+                    projects
+                </span>&nbsp;to see some of my work.
             </p>
         </div>
 

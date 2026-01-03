@@ -111,12 +111,12 @@ export default function App() {
                         
                         <h1 className="text-5xl md:text-8xl lg:text-[110px] font-black uppercase mb-10 tracking-tighter leading-none">
                             {section.title.split(' ').map((word, i) => (
-                                <span key={i} className={i % 2 === 0 ? "text-white" : "text-zinc-700"}>{word}{' '}</span>
+                                <span key={i} className={i % 2 === 0 ? "text-white" : "text-white/50"}>{word}{' '}</span>
                             ))}
                         </h1>
 
                         <div className="w-full max-h-[60vh] overflow-y-auto custom-scrollbar pr-6 pointer-events-auto">
-                            <section.component />
+                            <section.component setActiveTab={setActiveTab} />
                         </div>
                     </motion.div>
                 )
