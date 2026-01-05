@@ -39,9 +39,13 @@ export default function App() {
 
     return (
     <div className="relative h-screen w-full bg-black overflow-hidden font-sans text-white selection:bg-white selection:text-black">
-            
+
         <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_center,_#0a0a0a_0%,_black_100%)]" />
         <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
+
+        <Pointer>
+            <div className="text-2xl -translate-x-1/2 -translate-y-1/2">🧋</div>
+        </Pointer>
 
         {/* Loading Animation */}
         <AnimatePresence>
@@ -62,16 +66,16 @@ export default function App() {
             )}
         </AnimatePresence>
 
-        <nav className="fixed top-12 right-12 z-[500] flex items-center pointer-events-auto border-b border-white/5 pb-2">
+        <nav className="fixed top-12 right-12 z-[200] flex items-center pointer-events-auto border-b border-white/5 pb-2">
             {sections.map((section, idx) => (
             <React.Fragment key={section.id}>
                 <button onClick={() => setActiveTab(section.id)}
-                className="group relative flex flex-col items-end px-6 cursor-pointer">
+                className="group relative flex flex-col items-end px-6">
                 <div className="flex items-center gap-2">
                     <span className={`text-[8px] font-mono transition-colors duration-300 ${activeTab === section.id ? 'text-zinc-400' : 'text-zinc-700'}`}>
                         (0{idx + 1})
                     </span>
-                    <span className={`text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-300 ${
+                    <span className={`text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-300 cursor-none ${
                         activeTab === section.id ? 'text-white' : 'text-zinc-500 hover:text-zinc-300'}`}>
                         {section.id}
                     </span>
@@ -90,7 +94,7 @@ export default function App() {
             ))}
         </nav>
 
-        <div className="fixed bottom-12 right-12 z-[500] flex items-center gap-8 pointer-events-none">
+        <div className="fixed bottom-12 right-12 z-[200] flex items-center gap-8 pointer-events-none">
             <div className="hidden lg:block opacity-30 text-[10px] 2xl:text-[12px] font-mono tracking-[0.2em] uppercase whitespace-nowrap">
                 EST. 1999 // 40.7479° N, 73.9867° W
             </div>

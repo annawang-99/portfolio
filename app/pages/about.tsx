@@ -54,13 +54,13 @@ export default function About( { setActiveTab }: AboutProps ) {
             <p className="relative text-zinc-400 text-lg leading-relaxed max-w-[500px]">
                 Check out my&nbsp;
                 <a href="https://github.com/annaw-99" target="_blank" rel="noopener noreferrer"
-                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">Github</a>
+                className="cursor-none hover:text-white transition-colors duration-300 ease-in-out">Github</a>
                 , find me on&nbsp;
                 <a href="https://www.linkedin.com/in/tungyen-wang" target="_blank" rel="noopener noreferrer"
-                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">LinkedIn</a>
+                className="cursor-none hover:text-white transition-colors duration-300 ease-in-out">LinkedIn</a>
                 , or send me an&nbsp;
                 <a href="mailto:annawang9909@gmail.com" target="_blank" rel="noopener noreferrer"
-                className="cursor-pointer hover:text-white transition-colors duration-300 ease-in-out">email</a>
+                className="cursor-none hover:text-white transition-colors duration-300 ease-in-out">email</a>
                 &nbsp;to say&nbsp;
                 <span className="group hover:text-white transition-colors duration-300 ease-in-out">'hi'
                 <span className="absolute left-0 top-full mt-2 opacity-0 
@@ -70,7 +70,7 @@ export default function About( { setActiveTab }: AboutProps ) {
                 </span>
                 , or see&nbsp;
                 <span onClick={() => setActiveTab('projects')} 
-                    className="cursor-pointer hover:text-white transition-colors 
+                    className="cursor-none hover:text-white transition-colors 
                     duration-300 underline decoration-white/30">
                     projects
                 </span>&nbsp;to see some of my work.
@@ -81,14 +81,14 @@ export default function About( { setActiveTab }: AboutProps ) {
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Connect</span>
                 <div className="flex gap-6">
-                <a href="https://github.com/annaw-99" target="_blank" className="cursor-pointer text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">Github</a>
-                <a href="https://www.linkedin.com/in/tungyen-wang" target="_blank" className="cursor-pointer text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">LinkedIn</a>
+                <a href="https://github.com/annaw-99" target="_blank" className="cursor-none text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">Github</a>
+                <a href="https://www.linkedin.com/in/tungyen-wang" target="_blank" className="cursor-none text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest font-bold">LinkedIn</a>
                 </div>
             </div>
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Contact</span>
                 <button onClick={handleCopyEmail}
-                    className="cursor-pointer text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest 
+                    className="cursor-none text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest 
                     font-bold group/email relative">
                     Email
                     {copied && (

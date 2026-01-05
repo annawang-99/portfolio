@@ -18,7 +18,7 @@ export default function About() {
                     <a href="mailto:annawang9909@gmail.com" target="_blank" rel="noopener noreferrer"
                     className="text-white hover:text-emerald-500">email</a>
                     &nbsp;to say&nbsp;
-                    <span className="group cursor-pointer">'hi'
+                    <span className="group cursor-none">'hi'
                         <span className="absolute left-0 top-full mt-2 opacity-0 
                         group-hover:opacity-100 transition-opacity text-orange-300 text-sm">
                         (*waves👋*)

@@ -19,7 +19,7 @@ export default function Projects() {
                 </h3>
                 <p className="relative text-white text-lg leading-relaxed max-w-[300px]">
                 Visit Github Repos to explore the&nbsp;
-                  <span className="group cursor-pointer">tech stack
+                  <span className="group cursor-none">tech stack
                     <span className="absolute left-0 top-full mt-2 opacity-0 
                       group-hover:opacity-100 transition-opacity text-orange-300 text-sm">
                       (TODO)
@@ -43,7 +43,7 @@ export default function Projects() {
 
           return (
           <div key={project.id} onClick={() => toggleProject(project.id)}
-            className="border border-white px-6 2xl:w-[900px] cursor-pointer transition-all duration-200 
+            className="border border-white px-6 2xl:w-[900px] cursor-none transition-all duration-200 
             hover:-translate-y-1 hover:translate-x-1 hover:shadow-[-6px_6px_0_0_white]">
                 <div className="flex justify-between items-center h-[150px]">
                     <div className="flex items-baseline space-x-6">

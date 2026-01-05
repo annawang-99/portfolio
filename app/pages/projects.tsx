@@ -21,7 +21,7 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
         return (
             <div key={i} className="border-b border-white/10 pb-6 last:border-0">
             <button onClick={() => setExpandedProject(isExpanded ? null : i)} style={{ color: textColor }}
-            className="group flex items-baseline gap-6 w-full text-left focus:outline-none pointer-events-auto cursor-pointer">
+            className="group flex items-baseline gap-6 w-full text-left focus:outline-none pointer-events-auto cursor-none">
                 <span className="xl:text-6xl font-extralight tracking-tight opacity-70 group-hover:opacity-100 transition-opacity">
                     {proj.title}
                 </span>
@@ -60,7 +60,7 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
                             <div className="mb-6 flex space-x-4 overflow-x-auto" onClick={(e) => e.stopPropagation()}>
                             {proj.images.map((src: string, idx: number) => (
                                 <a key={idx} href={proj.siteUrl || proj.repoUrl} target="_blank" rel="noopener noreferrer"
-                                    className="relative min-w-[220px] h-[140px] 2xl:min-w-[300px] 2xl:h-[220px] border border-white transition-colors cursor-pointer group/img">
+                                    className="relative min-w-[220px] h-[140px] 2xl:min-w-[300px] 2xl:h-[220px] border border-white transition-colors cursor-none group/img">
                                     <Image src={src} alt={`${proj.title}`} fill className="object-cover group-hover/img:opacity-80 transition-opacity" />
                                 </a>
                             ))}
@@ -75,10 +75,10 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
                             <div className="flex items-center gap-4 justify-end ml-4">
                                 {proj.siteUrl && (
                                     <a href={proj.siteUrl} target="_blank" rel="noopener noreferrer" 
-                                    className="cursor-pointer text-white hover:text-zinc-500 transition-colors text-sm font-bold uppercase tracking-widest">Live Site ↗</a>
+                                    className="cursor-none text-white hover:text-zinc-500 transition-colors text-sm font-bold uppercase tracking-widest">Live Site ↗</a>
                                 )}
                                 <a href={proj.repoUrl} target="_blank" rel="noopener noreferrer" 
-                                className="cursor-pointer text-white hover:text-zinc-500 transition-colors text-sm font-bold uppercase tracking-widest">Github Repo ↗</a>
+                                className="cursor-none text-white hover:text-zinc-500 transition-colors text-sm font-bold uppercase tracking-widest">Github Repo ↗</a>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
         {/* Old Portfolios */}
         <div className="border-b border-white/10 pb-6 last:border-0">
             <button onClick={() => setExpandedProject(expandedProject === 999 ? null : 999)} style={{ color: textColor }}
-            className="group flex items-baseline gap-6 w-full text-left focus:outline-none pointer-events-auto cursor-pointer">
+            className="group flex items-baseline gap-6 w-full text-left focus:outline-none pointer-events-auto cursor-none">
                 <span className="xl:text-6xl font-extralight tracking-tight opacity-70 group-hover:opacity-100 transition-opacity">
                     Old Portfolio Sites
                 </span>

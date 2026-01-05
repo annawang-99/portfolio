@@ -35,7 +35,7 @@ export function Pointer({
       const parentElement = containerRef.current.parentElement
 
       if (parentElement) {
-        // Add cursor-pointer to parent
+        // Add cursor-none to parent
         parentElement.style.cursor = "none"
 
         // Add event listeners to parent
@@ -74,7 +74,7 @@ export function Pointer({
       <AnimatePresence>
         {isActive && (
           <motion.div
-            className="pointer-events-none fixed z-200 transform-[translate(-50%,-50%)]"
+            className="pointer-events-none fixed z-500 transform-[translate(-50%,-50%)]"
             style={{
               top: y,
               left: x,
