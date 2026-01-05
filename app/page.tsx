@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Cpu, User, Layers } from 'lucide-react';
+import { Pointer } from "@/components/ui/pointer"
 
 import About from './pages/about';
 import Tech from './pages/tech';
