@@ -46,7 +46,7 @@ export default function About( { setActiveTab }: AboutProps ) {
                         Software Developer
                     </motion.span>
                 </span>
-                &nbsp;& Digital Crafter
+                {/* &nbsp;& Digital Crafter */}
             </h3>
         </div>
 
