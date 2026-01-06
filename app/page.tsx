@@ -56,10 +56,10 @@ export default function App() {
                             <circle cx="64" cy="64" r={radius} stroke="currentColor" strokeWidth="1" fill="transparent" className="text-zinc-900"/>
                             <motion.circle cx="64" cy="64" r={radius} stroke="currentColor" strokeWidth="1" fill="transparent" strokeDasharray={circumference} animate={{ strokeDashoffset }} className="text-white" />
                         </svg>
-                        <span className="absolute font-mono text-[10px] tracking-widest text-white">{progress}%</span>
+                        <span className="absolute font-mono text-[12px] tracking-widest text-white">{progress}%</span>
                     </div>
                     <motion.div 
-                        className="mt-8 text-[12px] tracking-[0.4em] text-white/80 font-semibold">
+                        className="mt-3 text-[10px] tracking-[0.2em] text-white/80 font-semibold">
                         Tip: Hover around the site
                     </motion.div>
                 </motion.div>

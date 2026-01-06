@@ -98,7 +98,7 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
                     Old Portfolio Sites
                 </span>
                 <span className="text-md opacity-40 group-hover:opacity-100 transition-opacity">
-                    {expandedProject === 999 ? "—" : "+"}
+                    {expandedProject === 999 ? "-" : "+"}
                 </span>
             </button>
 
@@ -113,9 +113,9 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
                     </p>
                     <div className="flex items-center gap-4">
                         <a href="https://annaw-99.github.io/web/" target="_blank" rel="noopener noreferrer" 
-                        className="text-white hover:text-indigo-400 transition-colors duration-300 ease-in-out text-sm font-bold uppercase tracking-widest">v1.0 Site ↗</a>
+                        className="text-white hover:text-zinc-500 transition-colors duration-300 ease-in-out text-sm font-bold uppercase tracking-widest cursor-none">v1.0 Site ↗</a>
                         <a href="https://annaw99.vercel.app/" target="_blank" rel="noopener noreferrer" 
-                        className="text-white hover:text-indigo-400 transition-colors duration-300 ease-in-out text-sm font-bold uppercase tracking-widest">v2.0 Site ↗</a>
+                        className="text-white hover:text-zinc-500 transition-colors duration-300 ease-in-out text-sm font-bold uppercase tracking-widest cursor-none">v2.0 Site ↗</a>
                     </div>
                 </div>
                 </motion.div>
