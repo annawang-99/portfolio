@@ -38,7 +38,7 @@ export default function App() {
     const strokeDashoffset = circumference - (progress / 100) * circumference;
 
     return (
-    <div className="relative h-screen w-full bg-black overflow-hidden font-sans text-white selection:bg-white selection:text-black">
+    <div className="relative h-[100dvh] w-full bg-black overflow-hidden font-sans text-white selection:bg-white selection:text-black">
 
         <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_center,_#0a0a0a_0%,_black_100%)]" />
         <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
@@ -70,7 +70,7 @@ export default function App() {
             )}
         </AnimatePresence>
 
-        <nav className="fixed bg-black top-12 left-6 right-6 lg:left-auto md:right-12 z-[200] flex items-center justify-center lg:justify-end 
+        <nav className="fixed bg-black/50 backdrop-blur-md top-12 left-6 right-6 lg:left-auto md:right-12 z-[200] flex items-center justify-center lg:justify-end 
         pointer-events-auto border-b border-white/5 pb-2 overflow-x-auto scrollbar-hide">
             {sections.map((section, idx) => (
             <React.Fragment key={section.id}>
