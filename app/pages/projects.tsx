@@ -116,13 +116,12 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
                                     {proj.images.map((src, idx) => (
                                         <a key={idx} href={proj.siteUrl || proj.repoUrl} target="_blank" rel="noopener noreferrer"
                                             onClick={(e) => e.stopPropagation()}
-                                            className="relative block min-w-[260px] md:min-w-[400px] h-[160px] md:h-[240px] border border-white/10 hover:border-white/40 
-                                            transition-colors cursor-none group/img shrink-0">
-                                            <img src={src} alt={`${proj.title}`} 
-                                            className="object-cover w-full h-full group-hover/img:opacity-80 transition-opacity" />
+                                            className="relative block min-w-[220px] h-[140px] 2xl:min-w-[300px] 2xl:h-[220px] border border-white/10 hover:border-white/40 
+                                            transition-colors cursor-none group/img">
+                                            <Image src={src} alt={`${proj.title}`} fill className="object-cover group-hover/img:opacity-80 transition-opacity" />
                                         </a>
                                     ))}
-                                    <div className="min-w-[24px] md:min-w-[48px] shrink-0 h-1" aria-hidden="true" />
+                                    {/* <div className="min-w-[24px] md:min-w-[48px] shrink-0 h-1" aria-hidden="true" /> */}
                                 </div>
                             </div>
                         )}
