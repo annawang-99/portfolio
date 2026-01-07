@@ -70,7 +70,7 @@ export default function App() {
             )}
         </AnimatePresence>
 
-        <nav className="fixed top-12 left-6 right-6 lg:left-auto md:right-12 z-[200] flex items-center justify-center lg:justify-end 
+        <nav className="fixed bg-black top-12 left-6 right-6 lg:left-auto md:right-12 z-[200] flex items-center justify-center lg:justify-end 
         pointer-events-auto border-b border-white/5 pb-2 overflow-x-auto scrollbar-hide">
             {sections.map((section, idx) => (
             <React.Fragment key={section.id}>
@@ -106,7 +106,7 @@ export default function App() {
                 EST. 1999 // 40.7479° N, 73.9867° W
             </div>
             <div className="lg:hidden opacity-30 text-[8px] font-mono tracking-[0.1em] uppercase">
-                NYC // 2024
+                NYC // 2026
             </div>
         </div>
       

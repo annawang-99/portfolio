@@ -27,7 +27,7 @@ export default function Tech({ setActiveTab }: TechProps) {
     return (
         <div className="pointer-events-auto w-full lg:max-w-5xl 2xl:max-w-[80%] flex flex-col cursor-none">
             <p className="text-zinc-500 text-lg max-w-[500px] leading-relaxed mb-12">
-                The tech and tools I use most often to build digital products.
+                The tech and tools I build digital products with.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
