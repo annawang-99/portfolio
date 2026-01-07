@@ -87,19 +87,21 @@ export default function About( { setActiveTab }: AboutProps ) {
             </div>
             <div className="space-y-2">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Contact</span>
-                <button onClick={handleCopyEmail}
-                    className="cursor-none text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest 
-                    font-bold group/email relative">
-                    Email
-                    {copied && (
-                        <span className="absolute left-0 bottom-full mb-2 
-                            bg-black border border-white/10 px-3 py-1.5 rounded text-zinc-300 text-xs text-center">
-                            Copied!
-                        </span>
-                    )}
-                </button>
+                <div className="flex gap-6">
+                    <button onClick={handleCopyEmail}
+                        className="cursor-none text-sm hover:text-zinc-500 transition-colors uppercase tracking-widest 
+                        font-bold group/email relative">
+                        Email
+                        {copied && (
+                            <span className="absolute left-0 bottom-full mb-2 
+                                bg-black border border-white/10 px-3 py-1.5 rounded text-zinc-300 text-xs text-center">
+                                Copied!
+                            </span>
+                        )}
+                    </button>
+                </div>
             </div>
-            <div className="space-y-2">
+            <div className="mt-2 space-y-2 md:mt-0">
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-zinc-500">Location</span>
                 <span className="text-sm uppercase tracking-widest font-bold text-white">NYC / Remote / Anywhere in the US</span>
             </div>

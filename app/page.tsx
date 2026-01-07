@@ -9,9 +9,9 @@ import Tech from './pages/tech';
 import Projects from './pages/projects';
 
 const sections = [
-    { id: 'about', num: '01', title: 'About Me', icon: User, component: About },
-    { id: 'tech', num: '02', title: 'Tech Stack', icon: Cpu, component: Tech },
-    { id: 'projects', num: '03', title: 'My Work', icon: Layers, component: Projects },
+    { id: 'about', num: '01', title: 'About Me', component: About },
+    { id: 'tech', num: '02', title: 'Tech Stack', component: Tech },
+    { id: 'projects', num: '03', title: 'My Work', component: Projects },
 ];
 
 export default function App() {
@@ -70,12 +70,11 @@ export default function App() {
             )}
         </AnimatePresence>
 
-        <nav className="fixed bg-black/50 backdrop-blur-md top-12 left-6 right-6 lg:left-auto md:right-12 z-[200] flex items-center justify-center lg:justify-end 
-        pointer-events-auto border-b border-white/5 pb-2 overflow-x-auto scrollbar-hide">
+        <nav className="fixed top-12 left-6 right-6 lg:left-auto md:right-12 z-[200] flex items-center justify-center lg:justify-end 
+        pointer-events-auto border-b border-white/5 pb-2">
             {sections.map((section, idx) => (
             <React.Fragment key={section.id}>
-                <button 
-                    onClick={() => setActiveTab(section.id)}
+                <button onClick={() => setActiveTab(section.id)}
                     className="group relative flex flex-col items-center lg:items-end px-4 lg:px-6 outline-none cursor-none"
                 >
                     <div className="flex items-center gap-2">
