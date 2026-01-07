@@ -41,7 +41,7 @@ export default function Tech({ setActiveTab }: TechProps) {
                     <div className="h-px flex-1 bg-white/5" />
                 </div>
                 
-                <ul className="space-y-4">
+                <ul className="space-y-2">
                     {group.items.map((skill) => (
                     <li key={skill}
                         onMouseEnter={() => setHoveredSkill(skill)}

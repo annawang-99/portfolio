@@ -21,19 +21,19 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
         return (
             <div key={i} className="border-b border-white/10 pb-6 last:border-0">
             <button onClick={() => setExpandedProject(isExpanded ? null : i)} style={{ color: textColor }}
-            className="group flex items-baseline gap-6 w-full text-left focus:outline-none pointer-events-auto cursor-none">
-                <span className="xl:text-6xl font-extralight tracking-tight opacity-70 group-hover:opacity-100 transition-opacity">
+            className="group flex flex-col md:flex-row items-start md:items-baseline gap-2 md:gap-6 w-full text-left focus:outline-none pointer-events-auto cursor-none">
+                <span className="text-4xl md:text-6xl font-extralight tracking-tight opacity-70 group-hover:opacity-100 transition-opacity">
                     {proj.title}
                 </span>
-                <span className="text-sm uppercase tracking-[0.2em] font-bold mb-2">
+                <span className="text-[10px] md:text-sm uppercase tracking-[0.2em] font-bold md:mb-2 opacity-50 md:opacity-100">
                     {proj.subtitle}
                 </span>
-                <span className="text-md opacity-40 group-hover:opacity-100 transition-opacity">
+                <span className="text-md opacity-40 group-hover:opacity-100 transition-opacity hidden md:inline">
                     {isExpanded ? "—" : "+"}
                 </span>
             </button>
 
-            <AnimatePresence>
+            {/* <AnimatePresence>
                 {isExpanded && (
                 <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -85,6 +85,69 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
                 </div>
                 </motion.div>
                 )}
+            </AnimatePresence> */}
+            <AnimatePresence>
+                {isExpanded && (
+                <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="overflow-hidden">
+                <div className="pt-6 pb-4 pointer-events-auto">
+                    <div className="w-full">
+                        <div className='mb-6'>
+                            <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
+                                {proj.description}
+                            </p>
+                            {proj.why && (
+                                <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
+                                    <span className='italic'>why?&nbsp;&nbsp;</span>{proj.why}
+                                </p>
+                            )}
+                            {proj.notes && (
+                                <p className="text-base md:text-lg text-zinc-500 leading-relaxed">
+                                    side note:&nbsp;{proj.notes}
+                                </p>
+                            )}
+                        </div>
+                        
+                        {!!proj.images?.length && (
+                            <div className="mb-6 lg:mb-8 w-full">
+                                <div className="flex space-x-4 overflow-x-auto no-scrollbar pb-2" 
+                                    onClick={(e) => e.stopPropagation()}>
+                                    {proj.images.map((src, idx) => (
+                                        <a key={idx} href={proj.siteUrl || proj.repoUrl} target="_blank" rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()}
+                                            className="relative block min-w-[260px] md:min-w-[400px] h-[160px] md:h-[240px] border border-white/10 hover:border-white/40 
+                                            transition-colors cursor-none group/img shrink-0">
+                                            <img src={src} alt={`${proj.title}`} 
+                                            className="object-cover w-full h-full group-hover/img:opacity-80 transition-opacity" />
+                                        </a>
+                                    ))}
+                                    <div className="min-w-[24px] md:min-w-[48px] shrink-0 h-1" aria-hidden="true" />
+                                </div>
+                            </div>
+                        )}
+
+                        <div className="flex flex-col md:flex-row md:items-center gap-6">
+                            <div className="flex flex-wrap gap-2">
+                                {proj.techStack.map(tech => (
+                                    <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider text-zinc-400">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                            <div className="flex items-center gap-6 md:gap-4">
+                                {proj.siteUrl && (
+                                    <a href={proj.siteUrl} target="_blank" rel="noopener noreferrer" 
+                                    className="cursor-none text-white hover:text-zinc-500 transition-colors text-[11px] md:text-sm font-bold uppercase tracking-widest ml-1">Live Site ↗</a>
+                                )}
+                                <a href={proj.repoUrl} target="_blank" rel="noopener noreferrer" 
+                                className="cursor-none text-white hover:text-zinc-500 transition-colors text-[11px] md:text-sm font-bold uppercase tracking-widest">Github Repo ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </motion.div>
+                )}
             </AnimatePresence>
             </div>
         );
@@ -94,10 +157,10 @@ export default function Projects({ setActiveTab }: ProjectsProps) {
         <div className="border-b border-white/10 pb-6 last:border-0">
             <button onClick={() => setExpandedProject(expandedProject === 999 ? null : 999)} style={{ color: textColor }}
             className="group flex items-baseline gap-6 w-full text-left focus:outline-none pointer-events-auto cursor-none">
-                <span className="xl:text-6xl font-extralight tracking-tight opacity-70 group-hover:opacity-100 transition-opacity">
+                <span className="text-4xl md:text-6xl font-extralight tracking-tight opacity-70 group-hover:opacity-100 transition-opacity">
                     Old Portfolio Sites
                 </span>
-                <span className="text-md opacity-40 group-hover:opacity-100 transition-opacity">
+                <span className="text-md opacity-40 group-hover:opacity-100 transition-opacity hidden md:inline">
                     {expandedProject === 999 ? "-" : "+"}
                 </span>
             </button>

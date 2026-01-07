@@ -50,7 +50,7 @@ export default function About( { setActiveTab }: AboutProps ) {
             </h3>
         </div>
 
-        <div className="my-12">
+        <div className="my-12 lg:my-6 2xl:my-12">
             <p className="relative text-zinc-400 text-lg leading-relaxed max-w-[500px]">
                 Check out my&nbsp;
                 <a href="https://github.com/annaw-99" target="_blank" rel="noopener noreferrer"

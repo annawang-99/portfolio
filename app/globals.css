@@ -68,10 +68,6 @@ body {
   to { transform: scaleX(1); }
 }
 
-.newyork:hover {
-  cursor: url('/cursors/newyork.png'), auto;
-}
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
