@@ -110,7 +110,7 @@ export default function App() {
             </div>
         </div>
       
-        <main className="relative z-[100] h-full w-full flex justify-center px-6 pt-30 pb-10 lg:pt-20 lg:px-20 lg:pb-24">
+        <main className="fixed inset-0 relative z-[100] h-full w-full flex justify-center px-6 pt-30 pb-10 lg:pt-20 lg:px-20 lg:pb-24">
             <AnimatePresence mode="popLayout">
                 {sections.map((section) => (
                 activeTab === section.id && (
