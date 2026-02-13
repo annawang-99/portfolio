@@ -23,7 +23,4 @@ Feel free to use this template for your own portfolio:
 Make sure to replace all personal information and projects with your own content
 Consider starring the repository if you find it helpful!
 
-### 🔅 Acknowledgement
-
-
 
