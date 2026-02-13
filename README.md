@@ -2,8 +2,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Portfolio
 
-> personal portfolio built with next.js
-
 ### 👩🏻‍💻 Getting Started
 To run this project locally:
 
